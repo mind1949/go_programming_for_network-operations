@@ -1,0 +1,4 @@
+host: localhost
+ports:
+  -80
+  -443
