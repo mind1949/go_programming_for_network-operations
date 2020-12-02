@@ -1,0 +1,9 @@
+{{/* bgp.tmpl */}}}}
+
+{{define "bgp"}}
+router {{.Bgp.As}}
+router-id {{.Bgp.Id -}}
+{{range .Bgp.Neighbors}}
+neighbor {{.Ip}} route as {{.As -}}
+{{end}}
+{{end}}
